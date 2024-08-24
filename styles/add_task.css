@@ -1,0 +1,562 @@
+:root {
+  --urgent: rgb(255, 51, 0); 
+  --medium: rgb(255, 145, 0); 
+  --low: rgb(102, 255, 0);
+  --low: rgb(102, 255, 0);  
+  --azure: rgb(131, 216, 255);
+  --azure-bg: rgb(222, 222, 255);
+  --red: red;
+  --red-bg: rgb(255, 212, 212);
+  --lime: lime;
+  --lime-bg: rgb(219, 255, 219);
+  --orange: orange;
+  --orange-bg: rgb(250, 234, 202);
+  --magenta: magenta;
+  --magenta-bg: rgb(255, 220, 255);
+  --blue: rgb(38, 38, 255);
+  --blue-bg: rgb(222, 222, 255);  
+}
+
+
+/*#container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 180px 120px 100px 350px;
+}*/
+
+#use-contact{
+  margin-top: 11px;
+}
+
+/*#clear-btn-mobile {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}*/
+
+
+.form-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  font-size: 21px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#box-left {
+  padding-right: 59px;
+  width: 50%;
+}
+
+#box-right {
+  padding-left: 59px;
+  width: 50%;
+}
+
+.labels {
+  font-weight: 400;
+  font-size: 21px;
+  padding-bottom: 10px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+#shosToAdd{
+  display: flex;
+  border-radius: 16px;
+  background-color: white;
+  align-items: center;
+  z-index: 1000000000000;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  outline: none;
+  padding: 15px 20px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #D1D1D1;
+  border-radius: 10px;
+  /* margin-bottom: 35px;  */
+  font-size: 21px;
+  background: #fff;
+  z-index: 100000;
+}
+
+/********** Select Category ************/
+select {
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+
+.color-bar {
+  width: 100%;
+  height: 30px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 20px;
+}
+
+.color {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 11px;
+  height: 11px;
+  background: transparen;
+  border-radius: 50%;
+}
+
+
+.active {
+  background: white;
+}
+
+.cont{
+  padding-left: 0px !important;
+}
+
+.cont-x{
+  padding-left: 5px!important;
+}
+
+/***** Colors Color Bar *****/
+
+.color-azure {
+  background: var(--azure);
+}
+
+.color-red  {
+  background: var(--red);
+}
+
+.color-lime  {
+  background: var(--lime);
+}
+
+.color-orange {
+  background: var(--orange)
+}
+
+.color-magenta {
+  background: var(--magenta)
+}
+
+.color-blue  {
+  background: var(--blue);
+}
+
+.category-line {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.input-category-line {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+}
+
+#input-category{
+  padding-right: 95px;!important
+}
+
+
+#close-category,
+#confirm-category {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 100000000;
+}
+
+#confirm-category {
+  right: 10px;
+}
+
+#close-category {
+  right: 50px;
+  border-right: 1px solid #D1D1D1;
+}
+
+/***** Colors Category Options *****/
+option.orange {
+  color: var(--orange);
+  background: var(--orange-bg);
+}
+
+option.lime {
+  color: var(--lime);
+  background: var(--lime-bg);
+}
+
+option.blue {
+  color: var(--blue);
+  background: var(--blue-bg);
+}
+
+option.red {
+  color: var(--red);
+  background: var(--red-bg);
+}
+
+option.magenta {
+  color: var(--magenta);
+  background: var(--magenta-bg);
+}
+
+option.azure {
+  color: var(--azure);
+  background: var(--azure-bg);
+}
+
+/******** Assign Input *************/
+
+
+#select-box {
+  position: relative;
+  border: 1px solid #D1D1D1;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+#form-assign {
+  margin-bottom: unset;
+  border: unset;
+}
+
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+
+#checkboxes {
+  position: absolute;
+  display: none;
+  width: 100%;
+  border: 1px solid #D1D1D1;
+  border-top: none;
+  padding: 15px 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #fff;
+  height: 120px;
+  overflow-y: scroll;
+  z-index: 1000000000;
+}
+
+#checkboxes::-webkit-scrollbar{
+  padding-left: 0px!important;
+}
+
+#invite-contact {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#invite-contact span,
+#invite-contact i {
+  color: #2A3647;
+}
+
+#invite-contact:hover span,
+#invite-contact:hover i {
+  color: #29ABE2;
+}
+
+#input-contact{
+  padding-right: 95px;
+}
+
+.input-contact-line {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+  z-index: 10000;
+}
+
+.assigned{
+  cursor: pointer;
+}
+
+#close-invitation,
+#confirm-invitation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+
+#confirm-invitation {
+  right: 10px;
+}
+
+#close-invitation {
+  right: 50px;
+  border-right: 1px solid #D1D1D1;
+}
+
+.assign-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.prio-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: auto;
+  margin-bottom: 35px;
+}
+
+.prios {
+  width: 33%;
+  padding: 10px 20px;
+  text-align: center;
+  border: 1px solid #D1D1D1;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.prios:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.d-none{
+  display: none!important;
+}
+
+
+form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+  padding: 12px 20px;
+  height: 50px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+#btn-2 {
+  background-color: var(--medium);
+  color: #fff;
+}
+
+
+#icon-prio-1 {
+  color: red;
+}
+
+
+#icon-prio-2 {
+  color: rgb(255, 166, 0);
+}
+
+
+#icon-prio-3 {
+  color: rgb(56, 199, 0);
+}
+
+.active-icon {
+  color: #fff;
+}
+
+.task-style{
+  padding-left: 100px;
+  padding: 44px 120px 0px 110px;
+  height: 80vh;
+  width: 100%;
+}
+
+#task-form{
+  height: 80%;
+  overflow: auto;
+  overflow-y: scroll;
+  padding-left: 2px;
+}
+
+#task-form::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+
+.subtask-line {
+  position: relative;
+  height: 50px;
+}
+
+#form-subtask {
+  padding-right: 50px;
+}
+
+#add-subtask {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  top: 0;
+  right: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#subtask-list {
+  width: 100%;
+  padding: 15px 20px;
+}
+
+#subtask-list  li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-bottom: 3px;
+}
+
+#subtask-list  span {
+  padding-left: 15px;
+  font-size: 18px;
+}
+
+
+#clear-btn {
+  background: transparent;
+  border: 1px solid #2A3647;
+  color: #2A3647;
+}
+
+#clear-btn:hover {
+  background: transparent;
+  color: #29ABE2;
+  border: 1px solid #29ABE2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#create-btn {
+  background: #2A3647;
+  color: #fff;
+  border: none;
+}
+
+#create-btn:hover {
+  background-color: #29ABE2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+#hrz-line {
+  position: absolute;
+  height: 100%;
+  background: #D1D1D1;
+  width: 1px;
+  left: 50%;
+}
+
+#message-box {
+  position: absolute;
+  bottom: 100px;
+  left: 350px;
+  right: 100px;
+  background: #2A3647;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  border: 1px solid #efeaea;
+  box-shadow: 4px 5px 8px #c8c4c4;
+  min-width: 173px;
+  z-index: 100000000;
+}
+
+
+#message-box p {
+  line-height: 18px;
+}
+
+#message-box button {
+  border: none;
+  background: none;
+  color: #2A3647;
+  border: 1px solid #2A3647;
+  padding: 2px 5px;
+  border-radius: 5px;
+  height: 35px;
+  width: 35px;
+}
+
+#message-box a {
+  border: 1px solid #2A3647;
+  text-decoration: none;
+  color: rgb(234 233 226);
+  background: #2A3647;
+  padding: 2px 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#message-box a:hover {
+  opacity: 0.6;
+}
+
+.message-buttons #message-close:hover {
+  opacity: 0.6;
+}
+
+
