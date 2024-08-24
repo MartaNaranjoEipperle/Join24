@@ -30,7 +30,7 @@ function generateNoteContent(task, i) {
       <div class="frame139">
         <div class="column">
           <div class="frame112" id="people${i}">
-            ${Array.isArray(task['initial']) ? task['initial'].join(', ') : ''}
+            ${Array.isArray(task['initial']) ? task['initial'].join(' ') : ''}
           </div>
           <div class="new-contact">
             ${Array.isArray(task['invite']) ? task['invite'].join(', ') : ''}
@@ -111,7 +111,7 @@ function generateNoteDetails(task, i) {
       <div><b>Assigned To:</b></div>
       <div class="column">
         <div class="frame112" id="people${i}">
-          ${task['initial'].join(', ')}
+          ${task['initial'].join(' ')}
         </div>
         <div class="new-task"><b>Subtask:</b><br>${task['newSubtask']}</div>
       </div>

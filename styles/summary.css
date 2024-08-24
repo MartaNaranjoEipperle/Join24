@@ -46,6 +46,10 @@ a{
     gap: 30px;
 }
 
+.kanban-heading{
+    cursor: default;
+}
+
 .summary {
     font-weight: 700;
     font-size: 61px;
@@ -70,6 +74,7 @@ a{
     flex-wrap: wrap;
     padding-left: 30px;
     padding-top: 195px;
+    cursor: default;
 }
 
 .morning {
